@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elixir Secreto — Experiencias premium con cannabis</title>
+  <meta name="description" content="Elixir Secreto: experiencias premium con THC en proceso. Próximo lanzamiento simultáneo en Europa y Colombia. Lanzamiento privado con invitación." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Modal verificación de edad -->
+  <div class="age-gate" id="ageGate" aria-modal="true" role="dialog">
+    <div class="age-gate__box">
+      <img class="age-gate__img" src="img/logo.jpeg" alt="Elixir Secreto" />
+      <h2>Acceso restringido</h2>
+      <p>
+        Este sitio está dirigido exclusivamente a mayores de edad según la legislación
+        de su país (18+ en Colombia · 18/21+ según la jurisdicción europea).
+        Al continuar confirmas que eres legalmente mayor de edad y que el consumo
+        de estos productos es legal en tu lugar de residencia.
+      </p>
+      <div class="age-gate__actions">
+        <button class="btn btn--gold" id="ageAccept">Soy mayor de edad</button>
+        <button class="btn btn--ghost" id="ageDeny">No, salir</button>
+      </div>
+      <p class="age-gate__note">Consumo responsable. Mantén estos productos fuera del alcance de menores.</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand">
+        <span class="brand__mark"><img src="img/logo.jpeg" alt="Elixir Secreto" /></span>
+        <span class="brand__name">Elixir Secreto</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <a href="#inicio" class="nav__link">Inicio</a>
+        <a href="#nosotros" class="nav__link">Nosotros</a>
+        <a href="#hacemos" class="nav__link">Qué hacemos</a>
+        <a href="#productos" class="nav__link">Productos</a>
+        <a href="#cocteleria" class="nav__link">Coctelería</a>
+        <a href="#expansion" class="nav__link">Colombia & Europa</a>
+        <a href="#contacto" class="nav__link nav__cta">Contacto</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero (pre-lanzamiento) -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal">Próximo lanzamiento</p>
+        <h1 class="hero__title reveal">Elixir<span class="hero__title-accent">Secreto</span></h1>
+        <p class="hero__launch reveal">Creación de experiencias en proceso…</p>
+        <p class="hero__subtitle reveal">
+          Próximo lanzamiento simultáneo en Europa y Colombia.
+          <strong>Registra tus datos para que no te lo pierdas.</strong>
+        </p>
+        <p class="hero__invite reveal">Lanzamiento privado con invitación</p>
+        <form class="launch-form reveal" id="launchForm" novalidate>
+          <input type="email" id="launchEmail" name="email" placeholder="tu@correo.com" required aria-label="Tu correo" />
+          <button type="submit" class="btn btn--gold">Quiero mi invitación</button>
+        </form>
+        <p class="launch-form__status" id="launchStatus" role="status" aria-live="polite"></p>
+        <div class="hero__actions reveal">
+          <a href="#nosotros" class="btn btn--ghost">Conócenos</a>
+          <a href="#productos" class="btn btn--ghost">Ver nuestra propuesta</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Desliza</span>
+        <span class="hero__scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section class="section" id="nosotros">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Quiénes somos</p>
+          <h2 class="section__title">Nosotros</h2>
+        </div>
+        <div class="two-col">
+          <div class="two-col__text reveal">
+            <p class="lead">
+              <strong>Elixir Secreto</strong> es una empresa dedicada a la
+              <strong>compra, transformación y elaboración</strong> de productos
+              premium con THC para el consumidor adulto y exigente.
+            </p>
+            <p>
+              Operamos una cadena completa: seleccionamos materia prima con trazabilidad,
+              la transformamos mediante extracción controlada y la convertimos en
+              productos únicos — ositos de gelatina, piezas de panadería y pastelería,
+              y cócteles de autor — donde el sabor y la precisión de dosis van de la mano.
+            </p>
+            <p>
+              Creemos en la transparencia, la calidad farmacéutica en cada lote y el
+              consumo responsable. Por eso cada producto nacido en nuestro talleres
+              lleva dosis estandarizadas, etiquetado claro y análisis de laboratorio.
+            </p>
+          </div>
+          <ul class="pillars reveal">
+            <li class="pillar">
+              <span class="pillar__num">01</span>
+              <div>
+                <h3>Compra selectiva</h3>
+                <p>Alianzas con cultivadores certificados y materia prima con análisis de laboratorio.</p>
+              </div>
+            </li>
+            <li class="pillar">
+              <span class="pillar__num">02</span>
+              <div>
+                <h3>Transformación</h3>
+                <p>Extracción, descarboxilación y refinado con procesos estandarizados y trazables.</p>
+              </div>
+            </li>
+            <li class="pillar">
+              <span class="pillar__num">03</span>
+              <div>
+                <h3>Elaboración</h3>
+                <p>Edibles, repostería y mixología con dosis controladas y sabor de autor.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qué hacemos -->
+    <section class="section section--dark" id="hacemos">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Nuestra actividad</p>
+          <h2 class="section__title">A qué nos dedicamos</h2>
+          <p class="section__desc">
+            Una operación integral alrededor del cannabis adulto: dominamos cada etapa
+            para entregar productos confiables, elegantes y deliciosos.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">↘</div>
+            <h3>Compra de materia prima</h3>
+            <p>
+              Seleccionamos flores y extractos de proveedores certificados. Cada lote
+              entra a nuestro sistema con código de trazabilidad y análisis de
+              cannabinoides y contaminantes.
+            </p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">◎</div>
+            <h3>Transformación</h3>
+            <p>
+              Descarboxilación y extracción controladas para activar y concentrar los
+              compuestos. Nuestro laboratorio garantiza potencia constante lote a lote.
+            </p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">✦</div>
+            <h3>Elaboración de producto final</h3>
+            <p>
+              Con la materia transformada creamos pequeños formatos precisos: gomitas,
+              bollería, pastelería fina y cócteles con alcohol y THC.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="section" id="productos">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Nuestra línea</p>
+          <h2 class="section__title">Productos</h2>
+          <p class="section__desc">
+            Formatos pequeños, dosis claras y sabores grandes. Todo etiquetado y con
+            recomendaciones de consumo.
+          </p>
+        </div>
+        <div class="grid-products">
+          <article class="product reveal">
+            <div class="product__emoji" aria-hidden="true">🐻</div>
+            <h3>Ositos y gomitas</h3>
+            <p>
+              Gomitas artesanales con sabores frutales y dosis estandarizadas por pieza
+              (5–10 mg). Perfectas para empezar y para dosificar con precisión.
+            </p>
+            <span class="product__tag">Edibles · 5–10 mg</span>
+          </article>
+          <article class="product reveal">
+            <div class="product__emoji" aria-hidden="true">🥐</div>
+            <h3>Panadería artesanal</h3>
+            <p>
+              Brownies, cookies y bollería horneada en pequeños lotes. Textura, aroma
+              y potencia equilibrados en cada pieza.
+            </p>
+            <span class="product__tag">Repostería · 10–25 mg</span>
+          </article>
+          <article class="product reveal">
+            <div class="product__emoji" aria-hidden="true">🧁</div>
+            <h3>Pastelitos y pastelería fina</h3>
+            <p>
+              Mini pasteles, cupcakes y dulces de autor para celebraciones privadas.
+              El postre ideal para experiencias compartidas con discreción.
+            </p>
+            <span class="product__tag">Pastelería · 10–20 mg</span>
+          </article>
+          <article class="product reveal">
+            <div class="product__emoji" aria-hidden="true">🍸</div>
+            <h3>Cócteles con alcohol y THC</h3>
+            <p>
+              Mixología de autor donde el licor y el THC se fusionan en equilibrios
+              precisos, servidos en experiencias y eventos privados.
+            </p>
+            <span class="product__tag">Coctelería · Al alcohol + THC</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coctelería -->
+    <section class="section section--bars" id="cocteleria">
+      <div class="container two-col two-col--flip">
+        <div class="two-col__text reveal">
+          <p class="section__eyebrow">Experiencia de autor</p>
+          <h2 class="section__title">La barra secreta</h2>
+          <p class="lead">
+            Nuestro equipo de mixología diseña cócteles exclusivos que combinan
+            destilados premium con infusión de THC.
+          </p>
+          <p>
+            Servimos en eventos privados, catas y veladas a medida: cada trago se
+            prepara con dosis estandarizadas, maridaje de sabores y protocolos de
+            consumo responsable. La experiencia se cierra con un bartender experto
+            que guía a cada invitado según su tolerancia.
+          </p>
+          <ul class="bars-list">
+            <li><span>Cócteles clásicos reimaginados</span></li>
+            <li><span>Catas privadas y eventos corporativos</span></li>
+            <li><span>Dosis personalizadas y trazables</span></li>
+          </ul>
+        </div>
+        <div class="bars-visual reveal" aria-hidden="true">
+          <div class="bars-visual__glass">
+            <span class="bars-visual__liquid"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expansión -->
+    <section class="section section--dark" id="expansion">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Nuestra presencia</p>
+          <h2 class="section__title">Colombia y Europa</h2>
+          <p class="section__desc">
+            Una operación con visión global, construida sobre el cumplimiento normativo
+            de cada territorio.
+          </p>
+        </div>
+        <div class="grid-2">
+          <article class="region reveal">
+            <h3>🇨🇴 Colombia</h3>
+            <p>
+              Base de nuestra operación de origen: acceso a materia prima, laboratorio
+              de transformación y producción de edibles dentro del marco legal de
+              cannabis medicinal y los desarrollos regulatorios en curso.
+            </p>
+          </article>
+          <article class="region reveal">
+            <h3>🇪🇺 Europa</h3>
+            <p>
+              Puerta de entrada a mercados de cannabis adulto y medicinal europeos
+              (Malta, Alemania, Países Bajos y más). Nuestra expansión prioriza países
+              con marcos legales claros y distribución regulada.
+            </p>
+          </article>
+        </div>
+        <div class="note reveal">
+          <strong>Compromiso legal:</strong> Elixir Secreto opera exclusivamente donde la
+          legislación lo permite. No comercializamos productos con THC en jurisdicciones
+          donde esté prohibido.
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">Hablemos</p>
+          <h2 class="section__title">Contacto</h2>
+          <p class="section__desc">
+            ¿Distribución, eventos privados o alianzas? Escríbenos.
+          </p>
+        </div>
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+            </div>
+            <div class="form__field">
+              <label for="email">Correo</label>
+              <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="topic">Asunto</label>
+            <select id="topic" name="topic">
+              <option value="distribucion">Distribución / Alianzas</option>
+              <option value="eventos">Eventos privados / Coctelería</option>
+              <option value="productos">Información de productos</option>
+              <option value="otros">Otro</option>
+            </select>
+          </div>
+          <div class="form__field">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" placeholder="Cuéntanos cómo podemos ayudarte" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--gold">Enviar mensaje</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img class="footer__logo" src="img/logo.jpeg" alt="Elixir Secreto" />
+        <span class="brand__name">Elixir Secreto</span>
+        <p>Compra · Transformación · Elaboración.<br />Colombia & Europa.</p>
+      </div>
+      <div class="footer__legal">
+        <h4>Aviso legal</h4>
+        <p>
+          El cannabis y el THC están regulados en la mayoría de países. Elixir Secreto
+          opera únicamente donde la ley lo permite y exige ser mayor de edad.
+        </p>
+        <p>
+          Consumo responsable: los productos con THC pueden afectar la capacidad de
+          conducir y tomar decisiones. No consumas en embarazo, lactancia ni con
+          medicamentos contraindicados. Mantén estos productos fuera del alcance de
+          menores. No hacemos afirmaciones médicas.
+        </p>
+      </div>
+      <div class="footer__contact">
+        <h4>Contacto</h4>
+        <p>hola@elixirsecreto.co</p>
+        <p>Bogotá · Amsterdam</p>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Elixir Secreto. Todos los derechos reservados.</span>
+      <span>Mayores de edad únicamente.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
