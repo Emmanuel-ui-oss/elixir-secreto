@@ -85,6 +85,7 @@ button {
 .btn--ghost {
   border-color: var(--line);
   color: var(--cream);
+  background: transparent;
 }
 
 .btn--ghost:hover {
